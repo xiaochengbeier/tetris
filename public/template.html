@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <style>
+        .wrap{
+            display: flex;
+            justify-content: center;
+           
+        }
+        #tetris{
+            position: relative;
+            background-color: black;
+        }
+        #core{
+            width: 300px;
+            height: 138px;
+            position: relative;
+        }
+        #core-wrap{
+            background-color: gray;
+        }
+        #over{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            background-color: rgba(228, 45, 12, 0.5);
+            display: none;
+        }
+        #over-show{
+            height: 50px;
+            width: 250px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bolder;
+            color: white;
+            position:absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            background-color: red;
+            border: 1px solid white;
+            margin: auto;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="tetris">
+            <div id="over">
+                <p id="over-show">游戏结束按下 空格键重新开始</p>
+            </div>
+        </div>
+        <div id="core-wrap">
+            <div id="core">
+                <h1>下一个</h1>
+            </div>
+
+             <h1>当前得分:<span id="current-core">0</span></h1>
+             <div>
+                 <h1>规则</h1>
+                 <h3>↓:表示向下</h3>
+                 <h3>←:表示向左</h3>
+                 <h3>→:表示向右</h3>
+                 <h3>↑:表示旋转</h3>
+                 <h3>空格表示重新开始</h3>
+             </div>
+        </div>
+    </div>
+  
+</body>
+</html>
